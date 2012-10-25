@@ -2,7 +2,7 @@
 
 ####Optional Scripts for [Boombot](https://github.com/TerrordactylDesigns/boombot)
 
-###For V2.0.0 which is still currently under development
+###For Boombot V2.0.0 and higher
 
 ###About
 
@@ -16,6 +16,10 @@ have a place to share everyones personal touches. Here it is.....
 * Phase 2 - copy the scripts you want into your Boombot's scripts dir
 * Phase 3 - ????
 * Phase 4 - profit.
+
+###Listing of scripts
+
+[Script listing and information](https://github.com/TerrordactylDesigns/Boombot-Scripts/wiki/Script-List)
 
 ###Write some of your own!
 
