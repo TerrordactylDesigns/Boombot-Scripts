@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = '/haters';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
 //haters array
 var hatersList = [
    "http://www.hatersgoingtohate.com/wp-content/uploads/2010/06/haters-gonna-hate-rubberband-ball.jpg"
@@ -22,5 +22,5 @@ var hatersList = [
   , "http://icanhasinternets.com/wp-content/uploads/2010/05/haters5.jpg"
   ];
   var rndm = Math.floor(Math.random() * 10);
-  boombot.bot.speak(hatersList[rndm]);
+  boombot.respond(uid, hatersList[rndm], private);
 }

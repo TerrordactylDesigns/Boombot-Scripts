@@ -9,8 +9,8 @@
 /**///        so it's easiest on people new to your command.
 exports.trigger = '/example';
 exports.listed = true;
-exports.script = function(boombot, data) {
-  boombot.bot.speak('What a lame example!');
+exports.script = function(boombot, text, uname, uid, private) {
+  boombot.respond(uid, 'What a lame example!', private);
 }
 /*<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
   trigger - if your trigger has a / in front it will only trigger on
@@ -22,6 +22,8 @@ exports.script = function(boombot, data) {
             will not be added to your bots help command.
 
   script  - What you came to do. an entire Boombot object is passed in.
-            Go wild. Along with a Boombot is the ttapi data return from
-            a speak event.
+            Go wild. Along with a Boombot is the text said in chat or
+            PM, the users name, and the users id. Lastly a boolean
+            value for whether or not the command will be returned via
+            chat or PM.
 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>*/

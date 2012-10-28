@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = '8ball';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
   //magic 8ball array
   var eightBallList = [
     "It is certain",
@@ -32,5 +32,5 @@ exports.script = function(boombot, data) {
     "Very doubtful"
   ]
   var rndm = Math.floor(Math.random() * 20);
-  boombot.bot.speak(":8ball: Says: " + eightBallList[rndm]);
+  boombot.respond(uid, ":8ball: Says: " + eightBallList[rndm], private);
 }

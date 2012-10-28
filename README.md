@@ -25,8 +25,7 @@ have a place to share everyones personal touches. Here it is.....
 
 example.script.js in the examples directory will point you to your new
 addiction... Each script will require the 3 exports and the header
-comments/information. An example of ttapi's data return that is sent
-in to the script function is also provided.
+comments/information.
 
 ###Fork me? Fork you!
 

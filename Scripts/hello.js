@@ -7,6 +7,6 @@
 /**/// Notes: None
 exports.trigger = '/hello';
 exports.listed = true;
-exports.script = function(boombot, data) {
-  boombot.bot.speak('Hai '+data.name+'!');
+exports.script = function(boombot, text, uname, uid, private) {
+  boombot.bot.speak(uid, 'Hai '+uname+'!', private);
 }

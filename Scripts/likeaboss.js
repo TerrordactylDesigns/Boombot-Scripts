@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'like a boss';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
   //like a boss array
   var bossList = [
   "http://s3.amazonaws.com/kym-assets/photos/images/original/000/114/151/14185212UtNF3Va6.gif?1302832919",
@@ -22,5 +22,5 @@ exports.script = function(boombot, data) {
   "http://www.japemonster.com/wp-content/uploads/2011/08/demotivational-posters-like-a-boss.jpg"
   ];
   var rndm = Math.floor(Math.random() * 10);
-  boombot.bot.speak(bossList[rndm]);
+  boombot.respond(uid, bossList[rndm], private);
 }

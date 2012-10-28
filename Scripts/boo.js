@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = '/boo';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
   //boo array
   var booList = [
     'Boo this man! BOOOOOOOOOO!',
@@ -15,5 +15,5 @@ exports.script = function(boombot, data) {
     'Who picked this song? Cause its terrible'
   ];
   var rndm = Math.floor(Math.random() * 3);
-  boombot.bot.speak(booList[rndm]);
+  boombot.respond(uid, booList[rndm], private);
 }

@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = '/cheer';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
   //cheer array
   var cheerList = [
   'I <3 this song!!',
@@ -15,5 +15,5 @@ exports.script = function(boombot, data) {
   'This is the best DJ EVER!'
   ];
   var rndm = Math.floor(Math.random() * 3);
-  boombot.bot.speak(cheerList[rndm]);
+  boombot.respond(uid, cheerList[rndm], private);
 }

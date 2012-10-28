@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = '/chuck';
 exports.listed = true;
-exports.script = function(boombot, data) {
+exports.script = function(boombot, text, uname, uid, private) {
   var http = require('http');
   var options = {
     host: 'api.icndb.com',
@@ -18,9 +18,9 @@ exports.script = function(boombot, data) {
   http.get(options, function(res) {
     res.on('data', function(chunk) {
       var chuck = JSON.parse(chunk);
-      boombot.bot.speak(chuck.value.joke);
+      boombot.respond(uid, chuck.value.joke, private);
     });
   }).on('error', function(e) {
-    boombot.bot.speak("Got error: " + e.message);
+    boombot.respond(uid, "Got error: " + e.message, private);
   });
 }
