@@ -10,7 +10,7 @@ exports.listed = true;
 exports.script = function(boombot, text, uname, uid, private) {
   //chop out the query and parse it
   try {
-    var searchQueryArray = data.text.split('google: ');
+    var searchQueryArray = text.split('google: ');
     var searchQuery = searchQueryArray[1];
     //replace the most common special characters and turn spaces into +
     searchQuery = searchQuery.replace(/\'/g,"%27").replace(/;/g,"%3B").replace(/#/g,"%23").replace(/@/g,"%40").replace(/&/g,"%26").replace(/</g,"%3C").replace(/>/g,"%3E").replace(/=/g,"%3D").replace(/\+/g,"%2B");
