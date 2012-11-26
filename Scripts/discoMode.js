@@ -21,14 +21,14 @@ exports.script = function( boombot, text, uname, uid, private ) {
 			// Make sure disco mode is on
 			if( isDiscoOn ) {
 				// Get the list of available avatars
-				boombot.getAvatarIds( function(data) {
+				boombot.bot.getAvatarIds( function(data) {
 					iCurrentAvatar++;
 					
 					if( iCurrentAvatar >= data.ids.length ) {
 						iCurrentAvatar = 0;
 					}
 					
-					boombot.setAvatar( iCurrentAvatar );
+					boombot.bot.setAvatar( iCurrentAvatar );
 				});
 			}
 		}, 1000);
