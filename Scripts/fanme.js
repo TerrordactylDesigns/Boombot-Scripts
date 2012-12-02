@@ -12,13 +12,13 @@ exports.script = function(boombot, text, uname, uid, private) {
     if (data.fans.contains(uid)) {
       boombot.bot.becomeFan(uid, function(res) {
         if (res.success) {
-          boombot.respond(uid, 'Here\'s your free fan point!');
+          boombot.respond(uid, 'Here\'s your free fan point!', private);
         } else {
-          boombot.respond(uid, 'I already fanned you!. Greedy....');
+          boombot.respond(uid, 'I already fanned you!. Greedy....', private);
         }
       });
     } else {
-      boombot.respond(uid, 'Not until you fan me first!');
+      boombot.respond(uid, 'Not until you fan me first!', private);
     }
   });
 }
