@@ -9,7 +9,7 @@ exports.trigger = '/fanme';
 exports.listed = true;
 exports.script = function(boombot, text, uname, uid, private) {
   boombot.bot.getFans(function (data) {
-    if (data.fans.contains(uid)) {
+    if (data.fans.indexOf(uid) != -1) {
       boombot.bot.becomeFan(uid, function(res) {
         if (res.success) {
           boombot.respond(uid, 'Here\'s your free fan point!', private);
