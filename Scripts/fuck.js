@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'fuck';
 exports.listed = false;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var fuckList = [
     "http://goo.gl/ZZA5D", 
     "http://goo.gl/LC1qn",
@@ -21,5 +21,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "What the fuck?"
   ];
   var rndm = Math.floor(Math.random() * 10);
-  boombot.respond(uid, fuckList[rndm], private);
+  deathbot.respond(fuckList[rndm]);
 }

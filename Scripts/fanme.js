@@ -5,20 +5,20 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: user must fan the bot first
-exports.trigger = '/fanme';
+exports.trigger = '.fanme';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
-  boombot.bot.getFans(function (data) {
+exports.script = function(deathbot, text, uname, uid) {
+  deathbot.bot.getFans(function (data) {
     if (data.fans.indexOf(uid) != -1) {
-      boombot.bot.becomeFan(uid, function(res) {
+      deathbot.bot.becomeFan(uid, function(res) {
         if (res.success) {
-          boombot.respond(uid, 'Here\'s your free fan point!', private);
+          deathbot.respond('Here\'s your free fan point!');
         } else {
-          boombot.respond(uid, 'I already fanned you!. Greedy....', private);
+          deathbot.respond('I already fanned you!. Greedy....');
         }
       });
     } else {
-      boombot.respond(uid, 'Not until you fan me first!', private);
+      deathbot.respond('Not until you fan me first!');
     }
   });
 }

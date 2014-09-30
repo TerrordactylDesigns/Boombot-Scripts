@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'google:';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   //chop out the query and parse it
   try {
     var searchQueryArray = text.split('google: ');
@@ -16,9 +16,9 @@ exports.script = function(boombot, text, uname, uid, private) {
     searchQuery = searchQuery.replace(/\'/g,"%27").replace(/;/g,"%3B").replace(/#/g,"%23").replace(/@/g,"%40").replace(/&/g,"%26").replace(/</g,"%3C").replace(/>/g,"%3E").replace(/=/g,"%3D").replace(/\+/g,"%2B");
     //replace spaces with +
     searchQuery = searchQuery.split(' ').join('+');
-    boombot.respond(uid, "http://lmgtfy.com/?q=" + searchQuery, private); //returns a link to let me google that for you for both your search and my amusement of delivery method
+    deathbot.respond("http://lmgtfy.com/?q=" + searchQuery); //returns a link to let me google that for you for both your search and my amusement of delivery method
   } catch (ex) {
     //sometimes people just put /google with no search terms.....
-    boombot.respond(uid, "google what? Don't make me pick, you won't like what you see.....", private);
+    deathbot.respond("google what? Don't make me pick, you won't like what you see.....");
   }
 }

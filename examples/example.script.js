@@ -7,18 +7,18 @@
 /**/// Notes: These comments here are all required information if you
 /**///        submit scripts to be published. Just give us the basics,
 /**///        so it's easiest on people new to your command.
-exports.trigger = '/example';
+exports.trigger = '.example';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
-  boombot.respond(uid, 'What a lame example!', private);
+exports.script = function(deathbot, text, uname, uid) {
+  deathbot.respond('What a lame example!');
 }
 /*<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
-  trigger - if your trigger has a / in front it will only trigger on
-            that exact match. If there is no / it will find that word
+  trigger - if your trigger has a . in front it will only trigger on
+            that exact match. If there is no . it will find that word
             ANYWHERE in a chat sentence.
 
   listed  - If set true the script trigger will be listed automatically
-            when /help is called. If false the script still runs, just
+            when .help is called. If false the script still runs, just
             will not be added to your bots help command.
 
   script  - What you came to do. an entire Boombot object is passed in.

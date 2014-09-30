@@ -5,9 +5,9 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: None
-exports.trigger = '/chuck';
+exports.trigger = '.chuck';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var http = require('http');
   var options = {
     host: 'api.icndb.com',
@@ -18,9 +18,9 @@ exports.script = function(boombot, text, uname, uid, private) {
   http.get(options, function(res) {
     res.on('data', function(chunk) {
       var chuck = JSON.parse(chunk);
-      boombot.respond(uid, chuck.value.joke, private);
+      deathbot.respond(chuck.value.joke);
     });
   }).on('error', function(e) {
-    boombot.respond(uid, "Got error: " + e.message, private);
+    deathbot.respond("Got error: " + e.message);
   });
 }

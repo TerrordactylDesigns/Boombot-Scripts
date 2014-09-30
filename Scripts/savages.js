@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'savages';
 exports.listed = false;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var savagesList = [
     "Yeah. Silent Bob, you're a rude motherfucker, you know that? But you're cute as hell. I could go down on you, suck you, line up three other guys, make like a circus seal.", 
     "Are there any balls down there?",
@@ -29,5 +29,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "http://goo.gl/st2VT"
   ];
   var rndm = Math.floor(Math.random() * 18);
-  boombot.respond(uid, savagesList[rndm], private);
+  deathbot.respond(savagesList[rndm]);
 }

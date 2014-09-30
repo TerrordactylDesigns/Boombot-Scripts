@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'like a boss';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   //like a boss array
   var bossList = [
     "http://goo.gl/R2Abr",
@@ -21,5 +21,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "http://goo.gl/KRlQr"
   ];
   var rndm = Math.floor(Math.random() * 9);
-  boombot.respond(uid, bossList[rndm], private);
+  deathbot.respond(bossList[rndm]);
 }

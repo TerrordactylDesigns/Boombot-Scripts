@@ -1,8 +1,6 @@
 #Boombot Scripts
 
-####Optional Scripts for [Boombot](https://github.com/TerrordactylDesigns/boombot)
-
-###For Boombot V2.0.0 and higher
+####Optional Scripts for [Boombot](https://github.com/TerrordactylDesigns/boombotplug)
 
 ###About
 

@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'nukem';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var nukemList = [
     "Get back to work, you slacker!", 
     "Damn, those alien bastards are gonna pay for shooting up my ride.",
@@ -21,5 +21,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "Come get some!"
   ];
   var rndm = Math.floor(Math.random() * 10);
-  boombot.respond(uid, nukemList[rndm], private);
+  deathbot.respond(nukemList[rndm]);
 }

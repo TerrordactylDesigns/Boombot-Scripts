@@ -5,8 +5,8 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: None
-exports.trigger = '/hello';
+exports.trigger = '.hello';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
-  boombot.bot.speak(uid, 'Hai '+uname+'!', private);
+exports.script = function(deathbot, text, uname, uid) {
+  deathbot.bot.speak(uid, 'Hai '+uname+'!');
 }

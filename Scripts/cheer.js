@@ -5,9 +5,9 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: None
-exports.trigger = '/cheer';
+exports.trigger = '.cheer';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   //cheer array
   var cheerList = [
   'I <3 this song!!',
@@ -15,5 +15,5 @@ exports.script = function(boombot, text, uname, uid, private) {
   'This is the best DJ EVER!'
   ];
   var rndm = Math.floor(Math.random() * 3);
-  boombot.respond(uid, cheerList[rndm], private);
+  deathbot.respond(cheerList[rndm]);
 }

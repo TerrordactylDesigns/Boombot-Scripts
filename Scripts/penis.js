@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'penis';
 exports.listed = false;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var penisList = [
     "http://goo.gl/S3DpO", 
     "That awkward moment when your friends facebook wasnt hacked, he just really loves penis.",
@@ -23,5 +23,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "What the fuck?"
   ];
   var rndm = Math.floor(Math.random() * 12);
-  boombot.respond(uid, penisList[rndm], private);
+  deathbot.respond(penisList[rndm]);
 }

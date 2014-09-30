@@ -5,9 +5,9 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: None
-exports.trigger = '/haters';
+exports.trigger = '.haters';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   //haters array
   var hatersList = [
     "http://goo.gl/sr4HT",
@@ -23,5 +23,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "http://goo.gl/6nf46"
   ];
   var rndm = Math.floor(Math.random() * 11);
-  boombot.respond(uid, hatersList[rndm], private);
+  deathbot.respond(hatersList[rndm]);
 }

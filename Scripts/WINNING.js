@@ -5,9 +5,9 @@
 /**/// Author: https://github.com/TerrordactylDesigns
 /**///
 /**/// Notes: duh, winning!
-exports.trigger = '/winning';
+exports.trigger = '.winning';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var http = require('http');
   var options = {
     host: 'sheenlipsum.com',
@@ -16,9 +16,9 @@ exports.script = function(boombot, text, uname, uid, private) {
   };
   http.get(options, function(res) {
     res.on('data', function(chunk) {
-      boombot.respond(uid, chunk, private);
+      deathbot.respond(chunk);
     });
   }).on('error', function(e) {
-    boombot.respond(uid, "Got error: " + e.message, private);
+    deathbot.respond("Got error: " + e.message);
   });
 }

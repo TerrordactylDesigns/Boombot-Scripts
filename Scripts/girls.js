@@ -7,7 +7,7 @@
 /**/// Notes: None
 exports.trigger = 'girls';
 exports.listed = true;
-exports.script = function(boombot, text, uname, uid, private) {
+exports.script = function(deathbot, text, uname, uid) {
   var girlsList = [
     "Danielle Lloyd: http://goo.gl/G4lrd", 
     "Danielle Lloyd: http://goo.gl/oxqVl",
@@ -29,5 +29,5 @@ exports.script = function(boombot, text, uname, uid, private) {
     "Kate Beckinsale: http://goo.gl/ueuqk"
   ];
   var rndm = Math.floor(Math.random() * 18);
-  boombot.respond(uid, girlsList[rndm], private);
+  deathbot.respond(girlsList[rndm]);
 }
